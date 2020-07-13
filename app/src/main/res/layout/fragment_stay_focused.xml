@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="48dp"
-    tools:context=".MindfulnessFragment">
+    tools:context=".StayFocusedFragment">
 
     <ImageView
         android:id="@+id/img_illustration"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/illustration"
-        android:src="@drawable/img_meditate"
+        android:src="@drawable/img_focus"
         app:layout_constraintBottom_toTopOf="@id/tv_main_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:id="@+id/tv_main_text"
         style="@style/TextStyle.Title"
         android:layout_marginTop="16dp"
-        android:text="@string/mindfulness"
+        android:text="@string/stay_focused"
         app:layout_constraintBottom_toTopOf="@id/tv_secondary_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         android:id="@+id/tv_secondary_text"
         style="@style/TextStyle"
         android:layout_marginTop="16dp"
-        android:text="@string/the_mind_is_powerful"
+        android:text="@string/maintain_focus"
         app:layout_constraintBottom_toTopOf="@id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,11 +40,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_next"
-        style="@style/NextButtonStyle"
-        android:text="@string/next"
+        android:text="@string/get_started"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_secondary_text" />
+        app:layout_constraintTop_toBottomOf="@id/tv_secondary_text"
+        style="@style/ButtonStyle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
