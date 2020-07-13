@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Onboarding</string>
+    <string name="keep_calm">Keep Calm</string>
+    <string name="feel_less_stressed">Feel less stressed and more mindful with meditation</string>
+    <string name="illustration">Illustration</string>
+    <string name="next">Next</string>
 </resources>
