@@ -5,4 +5,5 @@
     <color name="colorAccent">#651583</color>
     <color name="colorPrimaryText">#050505</color>
     <color name="colorSecondaryText">#202020</color>
+    <color name="colorGreyText">#d4d1d4</color>
 </resources>
