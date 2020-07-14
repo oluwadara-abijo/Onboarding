@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".StayFocusedFragment">
+    tools:context=".OnboardingObjectFragment">
 
     <ImageView
         android:id="@+id/img_illustration"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/illustration"
-        android:src="@drawable/img_focus"
+        android:src="@drawable/img_clock"
         app:layout_constraintBottom_toTopOf="@id/tv_main_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:id="@+id/tv_main_text"
         style="@style/TextStyle.Title"
         android:layout_marginTop="16dp"
-        android:text="@string/stay_focused"
+        android:text="@string/keep_calm"
         app:layout_constraintBottom_toTopOf="@id/tv_secondary_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         android:id="@+id/tv_secondary_text"
         style="@style/TextStyle"
         android:layout_marginTop="16dp"
-        android:text="@string/maintain_focus"
+        android:text="@string/feel_less_stressed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

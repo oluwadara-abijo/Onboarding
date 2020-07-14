@@ -38,9 +38,17 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
         FragmentStatePagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
         override fun getItem(position: Int): Fragment {
             return when (position) {
-                0 -> KeepCalmFragment()
-                1 -> MindfulnessFragment()
-                else -> StayFocusedFragment()
+                1 -> OnboardingObjectFragment().newInstance(
+                    R.drawable.img_meditate,
+                    R.string.mindfulness,
+                    R.string.the_mind_is_powerful
+                )
+                2 -> OnboardingObjectFragment().newInstance(
+                    R.drawable.img_focus,
+                    R.string.stay_focused,
+                    R.string.maintain_focus
+                )
+                else -> OnboardingObjectFragment()
             }
         }
 
@@ -48,9 +56,5 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
 
     }
 
-    //Class to handle button clicks
-    interface ButtonClickListener {
-        fun onButtonClick(pageNumber: Int)
-    }
 }
 
