@@ -13,8 +13,8 @@ private const val NUM_SCREENS = 3
 
 class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
 
-    private lateinit var onboardingAdapter: OnboardingAdapter
     private lateinit var viewPager: ViewPager
+    private lateinit var onboardingAdapter: OnboardingAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,6 +46,11 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
 
         override fun getCount(): Int = NUM_SCREENS
 
+    }
+
+    //Class to handle button clicks
+    interface ButtonClickListener {
+        fun onButtonClick(pageNumber: Int)
     }
 }
 
