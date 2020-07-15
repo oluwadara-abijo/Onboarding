@@ -24,6 +24,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_next"
         style="@style/NextButtonStyle"
+        android:layout_marginTop="0dp"
         android:text="@string/next"
         app:layout_constraintBottom_toTopOf="@id/indicator"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +34,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_get_started"
         style="@style/ButtonStyle"
+        android:layout_marginTop="0dp"
         android:text="@string/get_started"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/indicator"
