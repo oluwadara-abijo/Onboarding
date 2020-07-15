@@ -2,6 +2,7 @@ package com.dara.onboarding
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -32,6 +33,50 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
             }
         }
 
+        // Show appropriate buttons when page is scrolled
+        viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
+            }
+
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+            }
+
+            override fun onPageSelected(position: Int) {
+                when (position) {
+                    0, 1 -> {
+                        btn_next.visibility = View.VISIBLE
+                        btn_get_started.visibility = View.INVISIBLE
+                    }
+                    else -> {
+                        btn_next.visibility = View.INVISIBLE
+                        btn_get_started.visibility = View.VISIBLE
+                    }
+                }
+
+            }
+        })
+
+        // Set click listener on buttons
+        btn_next.setOnClickListener {
+            if (viewPager.currentItem == 0) {
+                viewPager.setCurrentItem(1, true)
+            } else {
+                viewPager.setCurrentItem(2, true)
+            }
+        }
+
+        btn_get_started.setOnClickListener {
+            Toast.makeText(requireContext(), "Done", Toast.LENGTH_SHORT).show()
+        }
+
+        tv_skip.setOnClickListener {
+            viewPager.setCurrentItem(2, true)
+            Toast.makeText(requireContext(), "Done", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private inner class OnboardingAdapter(fragmentManager: FragmentManager) :
@@ -39,13 +84,11 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
         override fun getItem(position: Int): Fragment {
             return when (position) {
                 1 -> OnboardingObjectFragment().newInstance(
-                    R.drawable.img_meditate,
-                    R.string.mindfulness,
+                    R.drawable.img_meditate, R.string.mindfulness,
                     R.string.the_mind_is_powerful
                 )
                 2 -> OnboardingObjectFragment().newInstance(
-                    R.drawable.img_focus,
-                    R.string.stay_focused,
+                    R.drawable.img_focus, R.string.stay_focused,
                     R.string.maintain_focus
                 )
                 else -> OnboardingObjectFragment()
