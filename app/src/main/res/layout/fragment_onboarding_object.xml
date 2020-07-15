@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="@dimen/margin_16"
     tools:context=".OnboardingObjectFragment">
 
     <ImageView
         android:id="@+id/img_illustration"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="32dp"
+        android:layout_margin="@dimen/margin_32"
         android:contentDescription="@string/illustration"
         android:src="@drawable/img_clock"
         app:layout_constraintBottom_toTopOf="@id/guideline"
@@ -29,7 +29,7 @@
     <TextView
         android:id="@+id/tv_main_text"
         style="@style/TextStyle.Title"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin_24"
         android:text="@string/keep_calm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
     <TextView
         android:id="@+id/tv_secondary_text"
         style="@style/TextStyle"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/margin_8"
         android:text="@string/feel_less_stressed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

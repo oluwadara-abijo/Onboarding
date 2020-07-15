@@ -3,8 +3,8 @@
     <item>
         <shape android:shape="oval">
             <size
-                android:width="32dp"
-                android:height="32dp" />
+                android:width="@dimen/margin_32"
+                android:height="@dimen/margin_32" />
             <solid android:color="#F8F4F8" />
         </shape>
     </item>
